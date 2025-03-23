@@ -9,8 +9,8 @@ Please fill in the required details below and submit your repository or website 
 
 ## 📌 Project Information  
 
-- **Team Name (if applicable):** _(Enter your team name here)_  
-- **Developer(s):** _(List team members or individual developer name)_  
+- **Team Name (if applicable):** Hellnah
+- **Developer(s):** Aravind, Arnav Manesh, Bhavana
 - **Project Repository Link:** [Your GitHub Repo](#)  
 - **Live Website Link:** [Your Live Website](#)  
 
@@ -32,10 +32,10 @@ Your project will be evaluated based on the following:
 💡 **Describe the changes and improvements you plan to implement in Level 2.**  
 _(Mention features, design enhancements, animations, interactivity, etc.)_  
 
-> Example:  
+
 > - Improve mobile responsiveness  
 > - Add interactive elements like hover effects and animations  
-> - Enhance the visual appeal with a better color palette  
+> - Information Enhancements
 
 ---
 
