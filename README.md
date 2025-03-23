@@ -32,10 +32,10 @@ Your project will be evaluated based on the following:
 💡 **Describe the changes and improvements you plan to implement in Level 2.**  
 _(Mention features, design enhancements, animations, interactivity, etc.)_  
 
-
+- links attachment
  - smooth scroll
  - drop down
-- hyper links
+
 
 ---
 
