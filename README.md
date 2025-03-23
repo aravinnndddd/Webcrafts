@@ -33,7 +33,7 @@ Your project will be evaluated based on the following:
 _(Mention features, design enhancements, animations, interactivity, etc.)_  
 
 
- - Information Enhancements
+ - smooth scroll
  - drop down
 - hyper links
 
