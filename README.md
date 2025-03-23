@@ -33,11 +33,11 @@ Your project will be evaluated based on the following:
 _(Mention features, design enhancements, animations, interactivity, etc.)_  
 
 
-> - Improve mobile responsiveness  
-> - Add interactive elements like hover effects and animations  
-> - Information Enhancements
-> - drop down
-> - hyper links
+ - Improve mobile responsiveness  
+ - Add interactive elements like hover effects and animations  
+ - Information Enhancements
+ - drop down
+- hyper links
 
 ---
 
