@@ -1,10 +1,62 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from "react";
 import { GraduationCap, BookOpen, Users, Globe, ChevronRight, Search, Menu } from 'lucide-react';
 
 function App() {
+
+
+
+
+  const statsData = [
+    { label: "Total No. of Students", value: 1349 },
+    { label: "Conveyance Facilities", value: 100, suffix: "%" },
+    { label: "Total ranks secured", value: 66 },
+    { label: "Final year pass percentage", value: 72, suffix: "%" },
+    { label: "Placements 2021-22", value: 172 },
+    { label: "Placements 2022-23", value: 142 },
+    { label: "Placements 2023-24", value: 136 },
+    { label: "Placements 2024-25 (Till Date)", value: 50 },
+  ];
+  
+  const Counter = ({ end, suffix = "" }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef(null);
+    
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            let start = 0;
+            const duration = 1000; // Animation duration
+            const increment = end / (duration / 16); // Calculate steps
+            const interval = setInterval(() => {
+              start += increment;
+              if (start >= end) {
+                setCount(end);
+                clearInterval(interval);
+              } else {
+                setCount(Math.ceil(start));
+              }
+            }, 16);
+          }
+        },
+        { threshold: 0.5 }
+      );
+  
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+  
+      return () => observer.disconnect();
+    }, [end]);
+  
+    return <div ref={ref} className="text-3xl font-bold text-blue-600">{count}{suffix}</div>;
+  };
+  
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800">
       {/* Navigation */}
+      
       <nav className="bg-black/20 backdrop-blur-lg fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -142,10 +194,69 @@ function App() {
           </div>
         </div>
       </div>
+      <section className="py-10
+.bg-transparent">
+        <div className="container mx-auto text-center">
+          <h2 className="text-4xl text-white mb-4 font-semibold mb-8">Statistics</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {statsData.map((stat, index) => (
+              <div key={index} className="p-6 bg-white rounded-lg shadow-md text-center">
+                <div className="text-lg font-semibold mb-2">{stat.label}</div>
+                <Counter end={stat.value} suffix={stat.suffix} />
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <section className="py-10 
+.bg-transparent text-white">
+      <div className="container mx-auto text-center">
+        <h2 className="text-4xl font-semibold mb-8">Message from Principal</h2>
+        <div className="flex flex-col lg:flex-row items-center gap-10 .bg-transparent p-8 rounded-lg shadow-md">
+          <div className="w-full lg:w-1/3 text-center">
+            <img
+              className="w-full rounded-lg shadow-lg"
+              src="https://www.perumonec.ac.in/assets/img/principal.jpg"
+              alt="Principal"
+            />
+            <h6 className="text-xl font-semibold mt-4">Dr. Rajeesh J.</h6>
+            <h6 className="text-gray-300">Principal, CE Perumon</h6>
+          </div>
+          <div className="w-full lg:w-2/3 text-left">
+            <p className="mb-4">Greetings to all!</p>
+            <p className="mb-4">
+              As the principal of this esteemed institution, I am proud of our commitment to
+              academic excellence, innovation, and community engagement.
+            </p>
+            <p className="mb-4">
+              Our college provides a welcoming and inclusive environment where all students can
+              thrive and achieve their goals. With our highly qualified faculty and staff,
+              state-of-the-art facilities, and diverse academic programs, we aim to prepare our
+              students for success in their chosen careers and as responsible citizens.
+            </p>
+            <p className="mb-4">
+              We believe in providing our students with a well-rounded education that goes beyond
+              just technical knowledge. We emphasize developing their soft skills, communication
+              abilities, and critical thinking to make them better problem solvers and leaders in
+              their respective fields.
+            </p>
+            <p className="mb-4">
+              I invite you to explore our website and discover what makes our college a special
+              place to learn and grow. We are committed to providing an exceptional educational
+              experience that will shape your future and inspire you to make a positive impact in
+              the world.
+            </p>
+            <p className="mb-4">Thank you for your interest in our college. We look forward to welcoming you soon.</p>
+            <p className="font-semibold">Thank you</p>
+          </div>
+        </div>
+      </div>
+    </section>
+      </section>
       <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-4">
         <div id="google_translate_element" className="mb-5"></div>
-        
+
         {/* Activities Section */}
         <h4 className="text-lg font-semibold mb-2">Activities</h4>
         <div className="flex flex-wrap gap-4 mb-5">
@@ -205,6 +316,7 @@ function App() {
           <div>
             <h4 className="text-lg font-semibold">Contact</h4>
             <p><b>Telephone:</b> 0474 2550500, 9447150400 <br /> <b>Email:</b> principal@perumonec.ac.in</p>
+          
           </div>
           <div>
             <h4 className="text-lg font-semibold">For admission related queries</h4>
