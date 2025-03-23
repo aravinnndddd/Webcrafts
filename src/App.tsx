@@ -12,7 +12,7 @@ function App() {
             <div className="flex items-center">
               
            
-      <img src="./src/assets/topicon.png" alt="top" className="max-w-[60%] "/>
+     <a href=""> <img src="./src/assets/topicon.png" alt="top" className="max-w-[60%] "/></a>
         
             </div>
             <div className="hidden md:block">
@@ -20,8 +20,9 @@ function App() {
               <a href="#" className="text-gray-300 hover:text-white transition-colors">Admissions</a>
               <a href="#" className="text-gray-300 hover:text-white transition-colors">Faculity</a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Academics</a>
+                <a href="#Department" className="text-gray-300 hover:text-white transition-colors">Departments</a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Campus Life</a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Research</a>
+          
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Events</a>
               
             
@@ -88,15 +89,17 @@ function App() {
               <div className="bg-blue-500/10 p-6 rounded-2xl mb-6 inline-block">
                 <Globe className="h-12 w-12 text-blue-400" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Global Network</h3>
-              <p className="text-gray-400">Connect with students and alumni worldwide</p>
+              <h3 className="text-xl font-semibold text-white mb-4">Highest Placement</h3>
+              <p className="text-gray-400">Our college achieved its highest placement, highlighting student excellence.
+
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Programs Section */}
-      <div className="py-24">
+      {/* department Section */}
+      <div id='Department' className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">Departments</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -139,6 +142,82 @@ function App() {
           </div>
         </div>
       </div>
+      <footer className="bg-gray-900 text-white py-10">
+      <div className="container mx-auto px-4">
+        <div id="google_translate_element" className="mb-5"></div>
+        
+        {/* Activities Section */}
+        <h4 className="text-lg font-semibold mb-2">Activities</h4>
+        <div className="flex flex-wrap gap-4 mb-5">
+          {[
+            { href: "https://www.perumonec.ac.in/pages/activities/sports.php", text: "Sports" },
+            { href: "https://www.perumonec.ac.in/pages/activities/pta.php", text: "Parent Teacher Association(PTA)" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/nss.php", text: "National Service Scheme(NSS)" },
+            { href: "https://www.perumonec.ac.in/pages/activities/ncc.php", text: "NCC" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/cgpc.php", text: "Career Guidance and Placement cell (CGPC)" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/professional-bodies.php", text: "Professional Bodies" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/iic.php", text: "IIIC & IEDC" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/amenities.php", text: "Women's Forum" },
+            { href: "https://www.perumonec.ac.in/pages/facilities/alumni.php", text: "Alumni Association" }
+          ].map(({ href, text }) => (
+            <a key={href} href={href} className="text-blue-400 hover:underline">{text}</a>
+          ))}
+        </div>
+        
+        {/* Downloads Section */}
+        <h4 className="text-lg font-semibold mb-2">Downloads</h4>
+        <div className="flex flex-wrap gap-4 mb-5">
+          {[
+            { href: "https://www.perumonec.ac.in/pages/downloads/students-form.php", text: "Application Forms (Students)" },
+            { href: "https://www.perumonec.ac.in/assets/pdf/wifi.pdf", text: "Wireless Access Authorization Form" },
+            { href: "https://ktu.edu.in/eu/acd/academicRegulation.htm", text: "Syllabus" },
+            { href: "https://cep.etlab.in/user/login", text: "Attendance Software" },
+            { href: "https://www.perumonec.ac.in/pages/downloads/fee.php", text: "Fee Structure" },
+            { href: "https://www.perumonec.ac.in/pages/downloads/scholarships.php", text: "Applications for Scholarships" },
+            { href: "https://www.perumonec.ac.in/assets/pdf/nirf2024.pdf", text: "NIRF 2024" }
+          ].map(({ href, text }) => (
+            <a key={href} href={href} className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">{text}</a>
+          ))}
+        </div>
+        
+        {/* Official Sites Section */}
+        <h4 className="text-lg font-semibold mb-2">Official Sites</h4>
+        <div className="flex flex-wrap gap-4 mb-5">
+          {[
+            { href: "http://www.capekerala.org/", text: "CAPE" },
+            { href: "https://www.nbaind.org/", text: "NBA" },
+            { href: "https://www.perumonec.ac.in/pages/sites/cape-colleges.php", text: "Colleges Under CAPE" },
+            { href: "http://www.dtekerala.gov.in/", text: "Directorate of Technical Education" },
+            { href: "http://www.aicte-india.org/", text: "AICTE" },
+            { href: "http://cusat.ac.in/", text: "CUSAT" },
+            { href: "https://ktu.edu.in/home.htm", text: "APJ Abdul Kalam Technological University" }
+          ].map(({ href, text }) => (
+            <a key={href} href={href} className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">{text}</a>
+          ))}
+        </div>
+        
+        {/* Contact Details */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+          <div>
+            <h4 className="text-lg font-semibold">Address</h4>
+            <p>College of Engineering Perumon <br /> Perumon P O, Kollam Dist, Kerala, India, <br /> Pin - 691601</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold">Contact</h4>
+            <p><b>Telephone:</b> 0474 2550500, 9447150400 <br /> <b>Email:</b> principal@perumonec.ac.in</p>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold">For admission related queries</h4>
+            <p>Smt. Dhanya M - 9447013719 <br /> Sri. Shamim F H - 9747570236</p>
+          </div>
+        </div>
+        
+        {/* Footer Bottom */}
+        <div className="mt-5 border-t border-gray-700 pt-3 text-center">
+          <span>CEP © 2024, All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 }
