@@ -1,13 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
-import {
-  GraduationCap,
-  BookOpen,
-  Users,
-  Globe,
-  ChevronRight,
-  Search,
-  Menu,
-} from "lucide-react";
+import { useEffect, useState, useRef } from "react";
+import { BookOpen, Users, Globe, ChevronRight, Menu } from "lucide-react";
 
 function App() {
   const statsData = [
@@ -272,9 +264,7 @@ function App() {
 .bg-transparent"
       >
         <div className="container mx-auto text-center">
-          <h2 className="text-4xl text-white mb-4 font-semibold mb-8">
-            Statistics
-          </h2>
+          <h2 className="text-4xl text-white mb-4 font-semibold">Statistics</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {statsData.map((stat, index) => (
               <div
