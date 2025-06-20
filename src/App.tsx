@@ -68,7 +68,7 @@ function App() {
               <a href="">
                 {" "}
                 <img
-                  src="./src/assets/topicon.png"
+                  src="/assets/topicon.png"
                   alt="top"
                   className="max-w-[60%] "
                 />
@@ -130,7 +130,7 @@ function App() {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <img
-            src="../../src/assets/cepbg.jpg"
+            src="/assets/cepbg.jpg"
             alt="Campus"
             className="w-full h-full object-cover"
           />
@@ -210,31 +210,31 @@ function App() {
             {[
               {
                 title: "Mechanical Engineering",
-                image: "../../src/assets/me.png",
+                image: "/assets/me.png",
                 description:
                   "Department of Mechanical Engineering at the College of Engineering Perumon was established in 2011, offering a B.Tech programme in Mechanical Engineering (NBA Accredited) with an intake of 60 students and a part-time programme for working professionals in Mechanical Engineering with an intake of 30 per year.",
               },
               {
                 title: "Computer Science and Engineering",
-                image: "../../src/assets/cse.png",
+                image: "/assets/cse.png",
                 description:
                   "Department of Computer Science and Engineering at the College of Engineering Perumon was established in 2000, offering B.Tech programmes in Computer Science and Engineering (NBA Accredited) with an intake of 120 per year and Artificial Intelligence and Data Science with an intake of 60 per year.",
               },
               {
                 title: "Electronics and Communication Engineering",
-                image: "../../src/assets/ece.png",
+                image: "/assets/ece.png",
                 description:
                   "Department of Electronics and Communication Engineering at the College of Engineering Perumon was established in 2000, offering B.Tech programmes in Electronics & Communication Engineering (NBA Accredited) with an intake of 120 per year and Electronics and Computer Engineering with an intake of 60 per year",
               },
               {
                 title: "Electrical and Electronics Engineering",
-                image: "../../src/assets/eee.png",
+                image: "/assets/eee.png",
                 description:
                   "Department of Electrical and Electronics Engineering at the College of Engineering Perumon was established in 2000, offering a B.Tech programme in Electrical & Electronics Engineering (NBA Accredited) with an intake of 60 students and a part-time programme for working professionals in Electrical & Electronics Engineering with an intake of 30 per year",
               },
               {
                 title: "Applied Science",
-                image: "../../src/assets/as.png",
+                image: "/assets/as.png",
                 description:
                   "Department of Applied Science imparts excellent quality education in the areas like Physics, Chemistry, Mathematics, English and Physical Education, to the future engineers of all streams and enhances innovative thinking among them.",
               },
