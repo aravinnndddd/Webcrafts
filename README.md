@@ -1,52 +1,54 @@
-# Webcrafts
+# React + TypeScript + Vite
 
-# 🌐 College Website Prototype – Level 1 Evaluation  
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Welcome to the **Level 1 Evaluation** of the Web Development Competition! 🚀  
-Please fill in the required details below and submit your repository or website link for evaluation.  
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 📌 Project Information  
+## Expanding the ESLint configuration
 
-- **Team Name (if applicable):** Hellnah
-- **Developer(s):** Aravind, Arnav Manesh, Bhavana
-- **Project Repository Link:** [Your GitHub Repo](https://github.com/aravinnndddd/Webcrafts)
-- **Live Website Link:** [Your Live Website](#)  
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
----
+```js
+export default tseslint.config({
+  extends: [
+    // Remove ...tseslint.configs.recommended and replace with this
+    ...tseslint.configs.recommendedTypeChecked,
+    // Alternatively, use this for stricter rules
+    ...tseslint.configs.strictTypeChecked,
+    // Optionally, add this for stylistic rules
+    ...tseslint.configs.stylisticTypeChecked,
+  ],
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-## ✅ Level 1 Evaluation Criteria  
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Your project will be evaluated based on the following:  
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-1️⃣ **Basic Design Elements (30 Marks)** – Color scheme, typography, and layout  
-2️⃣ **Navigation & Layout (30 Marks)** – Proper structuring of sections and navigation  
-3️⃣ **Responsiveness (20 Marks)** – Works well on different screen sizes  
-4️⃣ **Improvement Plan (20 Marks)** – List of enhancements planned for Level 2  
-
----
-
-## 🔮 Future Plan & Improvements  
-
-💡 **Describe the changes and improvements you plan to implement in Level 2.**  
-_(Mention features, design enhancements, animations, interactivity, etc.)_  
-
-- links attachment
- - smooth scroll
- - drop down
-
-
----
-
-## 📩 Submission Guidelines  
-
-- Fill out the details above.  
-- Submit this README file along with your repository.  
-- Ensure your website link is working before submission.  
-
-Best of luck! 🚀🎨  
-
----
-
-📌 **For queries, contact:** _(Provide competition organizer details if needed)_  
+export default tseslint.config({
+  plugins: {
+    // Add the react-x and react-dom plugins
+    'react-x': reactX,
+    'react-dom': reactDom,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended typescript rules
+    ...reactX.configs['recommended-typescript'].rules,
+    ...reactDom.configs.recommended.rules,
+  },
+})
+```
