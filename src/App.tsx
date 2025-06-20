@@ -12,8 +12,12 @@ function App() {
     { label: "Placements 2023-24", value: 136 },
     { label: "Placements 2024-25 (Till Date)", value: 50 },
   ];
+  interface CounterProps {
+    end: number;
+    suffix?: string;
+  }
 
-  const Counter = ({ end, suffix = "" }) => {
+  const Counter: React.FC<CounterProps> = ({ end, suffix = "" }) => {
     const [count, setCount] = useState(0);
     const ref = useRef(null);
 
